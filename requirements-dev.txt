@@ -1,0 +1,5 @@
+# Dev tools — not needed for running the application
+ruff
+mypy
+pytest
+pandas-stubs

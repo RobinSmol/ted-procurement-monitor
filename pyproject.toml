@@ -1,0 +1,77 @@
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "data/",
+    "logs/",
+]
+
+line-length = 88
+indent-width = 4
+
+# Python 3.14
+target-version = "py314"
+
+[tool.ruff.lint]
+
+select = ["E", "F", "I", "W"]
+ignore = []
+
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+# Use double quotes for strings.
+quote-style = "double"
+
+# Indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.ruff.lint.per-file-ignores]
+"src/storage/db_manager.py" = ["E501"]
+"src/core/email_service.py" = ["E501"]
+
+
+[tool.mypy]
+
+python_version = "3.14"
+
+warn_return_any = true
+
+warn_unused_ignores = true
+
+ignore_missing_imports = true

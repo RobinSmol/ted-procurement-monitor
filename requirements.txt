@@ -1,0 +1,21 @@
+# requirements.txt
+# Core
+python-dotenv==1.0.1
+
+# Data extraction
+requests==2.34.2
+currencyconverter==0.18.18
+
+# Data validation
+pydantic==2.7.1
+pydantic-settings==2.14.1
+
+# Vector search
+chromadb==1.5.9
+sentence-transformers==5.5.1
+torch==2.12.0
+
+# Dashboard
+streamlit==1.58.0
+plotly==5.22.0
+pandas==2.2.2
